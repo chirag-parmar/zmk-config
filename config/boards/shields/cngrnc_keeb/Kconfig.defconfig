@@ -1,21 +1,21 @@
 if SHIELD_CHIPPER_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "Chipper"
+	default "Congruence Keeb"
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default y
 
 endif
 
-if SHIELD_CHIPPER_RIGHT
+if SHIELD_CNGRNC_KEEB_RIGHT
 
 config ZMK_KEYBOARD_NAME
-	default "Chipper Right"
+	default "Congruence Keeb Right"
 	
 endif
 
-if SHIELD_CHIPPER_LEFT || SHIELD_CHIPPER_RIGHT
+if SHIELD_CNGRNC_KEEB_LEFT || SHIELD_CNGRNC_KEEB_RIGHT
 
 config ZMK_SPLIT
 	default y

@@ -1,0 +1,8 @@
+# Copyright (c) 2020 Pete Johanson
+# SPDX-License-Identifier: MIT
+
+config SHIELD_CNGRNC_KEEB_LEFT
+	def_bool $(shields_list_contains,cngrnc_keeb_left)
+
+config SHIELD_CNGRNC_KEEB_RIGHT
+	def_bool $(shields_list_contains,cngrnc_keeb_right)
