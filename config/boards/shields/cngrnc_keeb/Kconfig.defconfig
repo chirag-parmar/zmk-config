@@ -1,52 +1,17 @@
-if SHIELD_CHIPPER_LEFT
+if SHIELD_CNGRNC_KEEB_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "Congruence Keeb"
+    default "Congruence Keyboard"
 
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-	default y
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
 
 endif
 
-if SHIELD_CNGRNC_KEEB_RIGHT
-
-config ZMK_KEYBOARD_NAME
-	default "Congruence Keeb Right"
-	
-endif
-
-if SHIELD_CNGRNC_KEEB_LEFT || SHIELD_CNGRNC_KEEB_RIGHT
+if SHIELD_CNGRNC_KEEB
 
 config ZMK_SPLIT
-	default y
- 
-
-config ZMK_DISPLAY
-	select LV_FONT_MONTSERRAT_26
-
-
-if ZMK_DISPLAY
-
-config SPI
-	default y
-
-config LS0XX
-	default y
-
-config LV_Z_BITS_PER_PIXEL
-	default 1
-
-choice LV_COLOR_DEPTH
-	default LV_COLOR_DEPTH_1
-
-endchoice
-
-config LV_DPI_DEF
-	default 30
-
-config LV_Z_VDB_SIZE
-	default 16
-
-endif # ZMK_DISPLAY
+    default y
 
 endif
+

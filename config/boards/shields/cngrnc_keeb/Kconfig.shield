@@ -1,8 +1,12 @@
 # Copyright (c) 2020 Pete Johanson
 # SPDX-License-Identifier: MIT
+config SHIELD_CNGRNC_KEEB
+    bool
 
 config SHIELD_CNGRNC_KEEB_LEFT
 	def_bool $(shields_list_contains,cngrnc_keeb_left)
+	select SHIELD_CNGRNC_KEEB
 
 config SHIELD_CNGRNC_KEEB_RIGHT
 	def_bool $(shields_list_contains,cngrnc_keeb_right)
+	select SHIELD_CNGRNC_KEEB
