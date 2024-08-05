@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "chipper.dtsi"
+#include "cngrnc_keeb.dtsi"
 
 &kscan0 {
 	col-gpios
