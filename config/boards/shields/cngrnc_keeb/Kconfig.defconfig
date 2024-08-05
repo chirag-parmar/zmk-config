@@ -1,7 +1,7 @@
 if SHIELD_CNGRNC_KEEB_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Congruence Keyboard"
+    default "congruencekeebs"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
