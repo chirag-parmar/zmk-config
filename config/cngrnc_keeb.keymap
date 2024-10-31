@@ -13,8 +13,7 @@
 #define DEFAULT 0
 #define LOWER   1
 #define RAISE   2
-#define NAVI    3
-#define ADJS    4
+#define ADJS    3
 
 / {
         
@@ -41,13 +40,13 @@
 //                                   |  GUI   |   ADJS  |   LWR   |   SPC   |       |  ENT  |  None |  ADJS   |  LALT   |
 //                                   '--------+---------+---------+---------'       '-------+-------+---------+---------'
                   bindings = <
-        &kp ESC        &kp Q    &kp W    &kp E    &kp R     &kp T                                 &kp Y    &kp U      &kp I     &kp O     &kp P  &kp BKSP
-        &kp LCTL       &kp A    &kp S    &kp D    &kp F     &kp G                                 &kp H    &kp J      &kp K     &kp L     &none  &none
-        &kp LSFT       &kp Z    &kp X    &kp C    &kp V     &kp B     &mo RAISE           &none   &kp N    &kp M      &none     &none     &none  &mo NAVI
-                                    &kp LGUI   &mo ADJS &mo LOWER  &mt SPC TAB            &kp RET &none    &mo ADJS   &kp LALT
+        &kp ESC        &kp Q    &kp W    &kp E    &kp R     &kp T                                 &kp Y    &kp U      &kp I     &kp O     &kp P     &kp BKSP
+        &kp TAB        &kp A    &kp S    &kp D    &kp F     &kp G                                 &kp H    &kp J      &kp K     &kp L     &kp SEMI  &kp SQT
+        &kp LCTL       &kp Z    &kp X    &kp C    &kp V     &kp B      &kp MINUS    &kp EQUAL     &kp N    &kp M      &kp COMMA &kp DOT   &kp FSLH  &kp BSLH
+                                       &kp LALT   &kp LSHFT &kp SPACE  &kp LGUI     &mo LOWER     &RET     &mo RAISE  &mo ADJS
                             >;
 
-                  label = "Jing";
+                  label = "Default";
                 };
 
 
@@ -64,12 +63,13 @@
 //                                   '--------+---------+---------+---------'       '-------+-------+---------+---------'
 
                   bindings = <
-          &none      &kp F5   &kp F8   &kp F9   &kp F10   &none                         &kp FSLH   &kp NUM_7  &kp NUM_8  &kp NUM_9  &kp MINUS  &kp BKSP
-          &none      &kp F4   &kp F5   &kp F6   &kp F11   &none                         &kp STAR   &kp NUM_4  &kp NUM_5  &kp NUM_6  &kp COMMA  &none
-          &none      &kp F1   &kp F2   &kp F3   &kp F12   &none     &trans      &trans  &kp NUM_0  &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp EQUAL  &none
-                                       &trans   &trans    &trans    &trans      &trans  &trans     &trans     &trans
+          &trans        &kp NUM_1    &kp NUM_2    &kp NUM_3   &kp NUM_4   &NUM_5                         &kp NUM_6     &kp NUM_7   &kp NUM_8  &kp NUM_9  &kp NUM_0   &kp DEL
+          &trans        &none        &kp LBKT     &kp RBKT    &kp LPAR    &kp RPAR                       &kp C_VOL_UP  &kp LEFT    &kp UP     &kp RIGHT  &kp C_NEXT  &K_PP
+          &trans        &none        &none        &none       &kp LBRC    &kp RBRC   &trans      &trans  &kp C_VOL_DN  &kp LEFT    &kp DOWN   &kp RIGHT  &kp C_PREV  &none
+                                                  &trans      &trans      &trans     &trans      &trans  &trans        &trans      &trans
                             >;
-                  label = "NUM";
+
+                  label = "Lower";
                 };
 
 
@@ -87,32 +87,13 @@
 //                                   '--------+---------+---------+---------'                       +---------+---------'---------------------
 
                         bindings = <
-        &none    &kp TILDE   &kp EXCL  &kp AT     &kp HASH   &kp PLUS                             &kp LBRC   &kp RBRC       &kp LESS_THAN      &kp GREATER_THAN   &kp COMMA  &kp BKSP
-        &mo NAVI    &kp GRAVE   &kp DLLR  &kp PRCNT  &kp CARET  &kp EQUAL                            &kp COLON  &kp SEMICOLON  &kp QUESTION       &kp FSLH           &kp DOT    &kp BACKSLASH
-        &none    &kp MINUS   &kp AMPS  &kp ASTRK  &kp LPAR   &kp RPAR   &none           &kp TAB   &kp LBKT   &kp RBKT       &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE   &kp UNDER  &kp PIPE
-                                       &none      &none      &none      &kp LALT        &kp RET   &none      &none          &none
+        &trans    &kp F1   &kp F2  &kp F3   &kp F4  &none                             &none  &none  &none &none &none &none
+        &trans    &kp F5   &kp F6  &kp F7   &kp F8  &none                             &none  &none  &none &none &none &none
+        &trans    &kp F9   &kp F10 &kp F11  &kp F12 &none   &trans        &kp trans   &none  &none  &none &none &none &none
+                                   &trans   &trans  &trans  &trans        &kp trans   &trans &trans &trans
                         >;
-                        label = "SYM";
-                };
 
-              nav_layer {
-// NAVIGATION Layer: Directions
-// .--------------------------------------------------------------.    						.-----------------------------------------------------------.
-// |              |         |        |        |         |         |    						| PG UP | PG HOME |   UP    |  PG END |          |  PrtScn  |
-// |--------------+---------+--------+--------+---------+---------|    						|-------+---------+---------+---------+----------+----------|
-// |     CTRL     |         |        |        |         |         |    						| PF DN |  LEFT   |  DOWN   |  RIGHT  |          | CAPS LCK |
-// |--------------+---------+--------+--------+---------+---------+---------.       .-------+-------+---------+---------+---------+----------+----------|
-// |     SHIFT    |         |        |        |         |         |         |       |       |       |         |         |         |          |          |
-// '---------------------------------+--------+---------+---------+---------+       |-------+-------+---------+---------+-------------------------------'
-//                                   |  GUI   |         |   ALT   |         |       |       |       |         |         |
-//                                   '--------+---------+---------+---------'       '-------+-------+---------+---------'
-                        bindings = <
-          &none     &none   &none    &none     &none    &none                            &kp PG_UP  &kp HOME   &kp UARW   &kp END   &none  &kp PSCRN
-          &kp LCTL  &none   &none    &none     &none    &none                            &kp PG_DN  &kp LARW   &kp DARW   &kp RARW  &none  &kp CLCK
-          &kp LSFT  &none   &none    &none     &none    &none      &trans    &trans      &none      &none      &none      &none     &none  &trans
-                                     &kp LGUI  &none    &kp LALT   &trans    &trans      &none      &none      &none
-                        >;
-                        label = "NAV";
+                        label = "Raise";
                 };
 
 
@@ -129,12 +110,12 @@
 //                                 '--------+---------+---------+---------'       '-------+---------+---------+---------'
 
                         bindings = <
-    &kp NUM_0           &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4  &none
+    &none               &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4  &none
     &ext_power EP_ON    &bt BT_CLR    &bt BT_CLR_ALL &sys_reset    &bootloader   &soft_off                             &soft_off     &bootloader   &sys_reset    &bt BT_CLR_ALL &bt BT_CLR    &ext_power EP_ON
     &ext_power EP_OFF   &none         &none          &none         &none         &none         &trans    &trans        &none         &none         &none         &none          &none         &ext_power EP_OFF
-                                                     &trans        &trans        &trans        &trans    &trans        &trans        &trans       &trans
+                                                     &trans        &trans        &trans        &trans    &trans        &trans        &trans        &trans
                         >;
-                        label = "Profile";
+                        label = "Adjs";
                 };
         };
 };
