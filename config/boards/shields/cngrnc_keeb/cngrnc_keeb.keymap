@@ -63,7 +63,7 @@
 //                                   '--------+---------+---------+---------'       '-------+-------+---------+---------'
 
                   bindings = <
-          &trans        &kp NUM_1    &kp NUM_2    &kp NUM_3   &kp NUM_4   &NUM_5                         &kp NUM_6     &kp NUM_7   &kp NUM_8  &kp NUM_9  &kp NUM_0   &kp DEL
+          &trans        &kp NUM_1    &kp NUM_2    &kp NUM_3   &kp NUM_4   &kp NUM_5                      &kp NUM_6     &kp NUM_7   &kp NUM_8  &kp NUM_9  &kp NUM_0   &kp DEL
           &trans        &none        &kp LBKT     &kp RBKT    &kp LPAR    &kp RPAR                       &kp C_VOL_UP  &kp LEFT    &kp UP     &kp RIGHT  &kp C_NEXT  &kp K_PP
           &trans        &none        &none        &none       &kp LBRC    &kp RBRC   &trans      &trans  &kp C_VOL_DN  &kp LEFT    &kp DOWN   &kp RIGHT  &kp C_PREV  &none
                                                   &trans      &trans      &trans     &trans      &trans  &trans        &trans      &trans
@@ -89,8 +89,8 @@
                         bindings = <
         &trans    &kp F1   &kp F2  &kp F3   &kp F4  &none                             &none  &none  &none &none &none &none
         &trans    &kp F5   &kp F6  &kp F7   &kp F8  &none                             &none  &none  &none &none &none &none
-        &trans    &kp F9   &kp F10 &kp F11  &kp F12 &none   &trans        &kp trans   &none  &none  &none &none &none &none
-                                   &trans   &trans  &trans  &trans        &kp trans   &trans &trans &trans
+        &trans    &kp F9   &kp F10 &kp F11  &kp F12 &none   &trans        &trans   &none  &none  &none &none &none &none
+                                   &trans   &trans  &trans  &trans        &trans   &trans &trans &trans
                         >;
 
                         label = "Raise";
