@@ -13,9 +13,9 @@
 #
 ---
 include:
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble
     shield: cngrnc_keeb_left
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble
     shield: cngrnc_keeb_right
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble
     shield: settings_reset
