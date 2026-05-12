@@ -31,8 +31,6 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(3,5) RC(3,6) RC(2,6) RC(2,7) 
 
 	kscan0: kscan {
 		compatible = "zmk,kscan-gpio-matrix";
-		label = "KSCAN";
-
 		diode-direction = "col2row";
 		row-gpios
 			= <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>     //Row0
@@ -47,7 +45,6 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(3,5) RC(3,6) RC(2,6) RC(2,7) 
 	xiao_battery_voltage_divider: vbatt {
 		status = "okay";
 		compatible = "zmk,battery-voltage-divider";
-		label = "XIAO voltage divider";
 		io-channels = <&adc 7>;
 		output-ohms = <470000>;
 		full-ohms =  <1470000>;
